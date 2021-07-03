@@ -23,7 +23,8 @@
     <div class="relative w-screen h-screen flex flex-row">
         <div class="sidebar relative w-1/6 h-screen bg-gray-800 shadow-lg">
             <div class="m-8 pb-6 text-center text-xl font-semibold text-white border-b-2 border-gray-700">
-                <h1 class="cursor-pointer uppercase hover:text-gray-200">Aplikasi Surat</h1>
+                <h1 class="cursor-pointer uppercase hover:text-gray-200"><a href=<?= base_url().'index.php/home'?>>
+                        Aplikasi Surat</a></h1>
             </div>
             <div
                 class="m-8 pb-6 px-6 flex flex-row justify-center items-center text-center text-base text-white border-b-2 border-gray-700 cursor-pointer">
@@ -31,7 +32,7 @@
                 <h1 class="hover:text-gray-200"><?php echo $this->session->nama ?></h1>
             </div>
             <div class="m-8 pb-6 text-center text-base  text-white">
-                <h1 class=" cursor-pointer hover:text-gray-200">Home</h1>
+                <h1 class=" cursor-pointer hover:text-gray-200"><a href=<?= base_url().'index.php/home'?>>Home</a></h1>
             </div>
         </div>
         <div class="relative w-5/6 h-screen bg-gray-100">
