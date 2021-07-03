@@ -52,19 +52,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 $route['login'] = 'LoginController/index';
 $route['auth/login'] = 'LoginController/login';
-$route['auth/logout'] = 'LoginController/logout';
+$route['auth/logout'] = 'LoginController/logout';;
 
 $route['home'] = 'HomeController/index';
-$route['mhs/add'] = 'HomeController/tambahMhs';
-$route['dosen/add'] = 'HomeController/tambahDosen';
-$route['mhs'] = 'HomeController/insert_mhs';
-$route['dosen'] = 'HomeController/insert_dosen';
-$route["mhs/edit/(:num)"] = 'HomeController/edit_mhs';
-$route["mhs/update"] = 'HomeController/update_mhs';
-$route["mhs/delete/(:num)"] = 'HomeController/delete_mhs';
-$route["dosen/edit/(:num)"] = 'HomeController/edit_dosen';
-$route["dosen/update"] = 'HomeController/update_dosen';
-$route["dosen/delete/(:num)"] = 'HomeController/delete_dosen';
+$route['surat/add'] = 'HomeController/tambah_surat';
+$route['surat'] = 'HomeController/buat_surat';
+$route["surat/edit/(:num)"] = 'HomeController/edit_surat';
+$route["surat/update"] = 'HomeController/update_surat';
+$route["surat/delete/(:num)"] = 'HomeController/delete_surat';
+$route["surat/print/(:num)"] = 'HomeController/lihat_surat';
 
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';

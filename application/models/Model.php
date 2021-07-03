@@ -2,13 +2,7 @@
 
 class Model extends CI_Model
 {
-    public function data_dosen()
-    {
-        $query = $this->db->query("SELECT *FROM tb_dosen");
-        return $query->result();
-    }
-
-    public function data_mahasiswa()
+    public function get_surat()
     {
         $query = $this->db->get('tb_mahasiswa');
         return $query->result();
@@ -17,6 +11,10 @@ class Model extends CI_Model
     public function input_data($data, $table)
     {
         $this->db->insert($table, $data);
+    }
+    public function get_dekan()
+    {
+        return $this->db->get('dekan')->row_array();
     }
     public function get_data($where, $table)
     {

@@ -18,19 +18,19 @@
         <h1 class="text-3xl font-bold p-4 tracking-wider">Login</h1>
         <form action="<?= base_url(). 'index.php/auth/login' ?>" method="post"
             class="w-96 flex flex-col border-2 border-gray p-4 rounded shadow">
-            <label for="" class="font-semibold">Email</label>
-            <input type="email" name="email" placeholder="Email"
+            <span class="text-red-600"><?= $this->session->flashdata('err') ?></span>
+            <label for="" class="font-semibold">NIM</label>
+            <span class="text-red-600"><?= form_error('nim') ?></span>
+            <input type="text" name="nim" placeholder="NIM"
                 class="border-2 border-gray p-2 rounded focus:outline-none focus:ring-1 focus:border-blue-300">
             <label for="" class="font-semibold mt-4">Password</label>
+            <span class="text-red-600"><?= form_error('password') ?></span>
             <input type="text" name="password" placeholder="Password"
                 class="border-2 border-gray p-2 rounded focus:outline-none focus:ring-1 focus:border-blue-300">
-            <button type="submit" class="p-2 bg-blue-600 mt-6 rounded text-white font-semibold hover:bg-blue-700">Sign
+            <button type="submit"
+                class="p-2 bg-blue-600 mt-6 rounded text-white font-semibold focus:outline-none hover:bg-blue-700">Sign
                 in</button>
         </form>
-        <div class="w-96 border border-gray rounded shadow mt-6 p-2 text-center font-semibold">
-            <p>Don't have an account? <span class="text-blue-600 cursor-pointer hover:underline"> Create an account
-                    here.</span></p>
-        </div>
     </div>
 
 </body>
